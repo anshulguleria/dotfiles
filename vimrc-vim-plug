@@ -1,0 +1,84 @@
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+Plug 'junegunn/seoul256.vim'
+
+" On-demand loading
+" nerdtree plugin
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" vim-javascript
+Plug 'pangloss/vim-javascript'
+
+" vim-jsdoc
+Plug 'heavenshell/vim-jsdoc'
+
+" Ctrl p fuzzy file searching
+Plug 'kien/ctrlp.vim'
+
+" emmet coding
+Plug 'mattn/emmet-vim'
+
+" plugin git-gutter git add/remoe hightlighting
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
+
+" other settings
+" set color scheme
+colorscheme torte
+
+" managing searches
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" handling tabspacing
+" size of a hard tabstop
+set tabstop=4
+
+" size of an "indent"
+set shiftwidth=4
+
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+
+" make "tab" insert indents instead of tabs at the beginning of a line
+set smarttab
+
+" always uses spaces instead of tab characters
+set expandtab
+
+" set line numbers to be visible
+set number
+
+" WHITESPACE CONFIGURATION
+" ----------------------------------
+" highlight extra whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" auto-strip white spaces on save
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+autocmd BufWritePre * :call TrimWhiteSpace()
+" ENDS
+
+" highlight current line
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=darkred
+" ENDS
+
+" folding settings
+set foldmethod=indent   " fold based on indent
+set foldnestmax=10      " deepest fold is 10 levels
+set nofoldenable        " don't fold by default
+set foldlevel=1         " trying this setting
+" ENDS
