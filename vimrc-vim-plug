@@ -26,7 +26,7 @@ call plug#end()
 
 " other settings
 " set color scheme
-colorscheme torte
+colorscheme seoul256
 
 " managing searches
 set ignorecase
