@@ -2,6 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
+
+" Colorscheme dracula
+Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " On-demand loading
 " nerdtree plugin
@@ -27,6 +31,7 @@ call plug#end()
 " other settings
 " set color scheme
 colorscheme seoul256
+"colorscheme gruvbox
 
 " managing searches
 set ignorecase
