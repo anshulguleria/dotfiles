@@ -30,10 +30,15 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+" enable 256 colors in vim
+set t_Co=256
+" set darkbackground
+set background=dark
+
 " other settings
 " set color scheme
-colorscheme seoul256
-"colorscheme gruvbox
+"colorscheme seoul256
+colorscheme gruvbox
 
 " managing searches
 set ignorecase
@@ -60,6 +65,9 @@ set expandtab
 
 " set line numbers to be visible
 set number
+
+" enable statusline
+set laststatus=2
 
 " status line settings for syntastic
 
