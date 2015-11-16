@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "templateStrings": true,
+        "module": true
+    },
+    "rules": {
+        "strict": 0,
+        "eqeqeq": 1,
+        "curly": 1,
+        "quotes": 0,
+        "no-unused-vars": 1
+    }
+}
+
