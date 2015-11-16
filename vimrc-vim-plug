@@ -69,12 +69,17 @@ set number
 " enable statusline
 set laststatus=2
 
+" setting overflow margin visible
+"set colorcolumn=80
+
 " status line settings for syntastic
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_java_checkers=['javac']
+let g:syntastic_javascript_checkers=['eslint']
 
 " WHITESPACE CONFIGURATION
 " ----------------------------------
