@@ -72,6 +72,11 @@ set laststatus=2
 " setting overflow margin visible
 "set colorcolumn=80
 
+" jsdoc settings
+let g:jsdoc_access_descriptions = 2
+let g:jsdoc_underscore_private = 1
+let g:jsdoc_enable_es6 = 1
+
 " status line settings for syntastic
 
 let g:syntastic_always_populate_loc_list = 1
