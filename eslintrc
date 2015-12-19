@@ -16,7 +16,10 @@
         "eqeqeq": 1,
         "curly": 1,
         "quotes": 0,
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "no-dupe-args": 2,
+        "no-dupe-keys": 2,
+        "no-redeclare": [2, {"builtinGlobals": true}]
     }
 }
 
