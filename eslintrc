@@ -19,7 +19,8 @@
         "no-unused-vars": 1,
         "no-dupe-args": 2,
         "no-dupe-keys": 2,
-        "no-redeclare": [2, {"builtinGlobals": true}]
+        "no-redeclare": [2, {"builtinGlobals": true}],
+        "no-undef": 2
     }
 }
 
