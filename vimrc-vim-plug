@@ -28,6 +28,10 @@ Plug 'mattn/emmet-vim'
 " plugin git-gutter git add/remoe hightlighting
 Plug 'airblade/vim-gitgutter'
 
+" Babel plugin
+Plug 'jbgutierrez/vim-babel'
+Plug 'mattn/webapi-vim'
+
 call plug#end()
 
 " enable 256 colors in vim
