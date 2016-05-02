@@ -76,6 +76,9 @@ set laststatus=2
 " setting overflow margin visible
 "set colorcolumn=80
 
+" Nerdtree settings
+let g:NERDTreeWinPos = "right"
+
 " jsdoc settings
 let g:jsdoc_access_descriptions = 2
 let g:jsdoc_underscore_private = 1
@@ -118,3 +121,7 @@ set foldnestmax=10      " deepest fold is 10 levels
 set nofoldenable        " don't fold by default
 set foldlevel=1         " trying this setting
 " ENDS
+
+" Handle modelines
+set nocompatible
+set modelines=1
