@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" color schemes
+Plug 'mhartington/oceanic-next'
+
 " Vim plugin for easy alignment. Visit github site for more info.
 Plug 'junegunn/vim-easy-align'
 
@@ -17,6 +20,9 @@ Plug 'othree/yajs.vim'
 " Plugin for jsdoc auto-snippets
 Plug 'heavenshell/vim-jsdoc'
 
+" Syntax checking plugin for asynchronous functionality
+Plug 'benekastah/neomake'
+
 " Emmet coding
 Plug 'mattn/emmet-vim'
 
@@ -30,6 +36,10 @@ Plug 'mattn/webapi-vim'
 
 call plug#end()
 
+" fzf mapping to Ctrl-p like
+" Ctrl-p plugin
+noremap <C-p> :FZF<CR>
+
 " NERDTree settings
 let g:NERDTreeWinPos = "right"
 
@@ -37,6 +47,19 @@ let g:NERDTreeWinPos = "right"
 let g:jsdoc_access_descriptions = 2
 let g:jsdoc_underscore_private = 1
 let g:jsdoc_enable_es6 = 1
+
+" neomake settings
+autocmd! BufWritePost,BufEnter * Neomake
+" Set linter to eslint
+let g:neomake_javascript_enabled_markers = ['eslint']
+let g:neomake_open_list = 2
+" Any extra args required to be passed to command
+"let g:neomake_javascript_eslint_marker
+
+" Theme settings
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme OceanicNext
+set background=dark
 
 " Set case insensitive search for autosuggest
 " and other commands
@@ -61,3 +84,26 @@ set softtabstop=4
 
 " Always uses spaces instead of tab character
 set expandtab
+
+" Folding settings
+set foldmethod=indent   " fold based on indent
+set foldnestmax=10      " deepest fold is 10 levels
+set nofoldenable        " don't fold by default
+set foldlevel=1
+
+" WHITESPACE CONFIGURATION
+" ----------------------------------
+" highlight extra whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" auto-strip white spaces on save
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+autocmd BufWritePre * :call TrimWhiteSpace()
+" ENDS
