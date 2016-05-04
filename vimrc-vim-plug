@@ -32,10 +32,19 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jbgutierrez/vim-babel'
 Plug 'mattn/webapi-vim'
 
+" plugin for quich movement in vim like 'f' key in vimium
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
-" enable 256 colors in vim
-set t_Co=256
+if !has('nvim')
+    " enable 24 bit color for nvim
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+else
+    " enable 256 colors in vim
+    set t_Co=256
+endif
+
 " set darkbackground
 set background=dark
 
@@ -92,6 +101,18 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_java_checkers=['javac']
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_python_checkers=['flake8', 'pylint']
+
+" configuration for easymotion
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" easymotion configuration ends
 
 " WHITESPACE CONFIGURATION
 " ----------------------------------
