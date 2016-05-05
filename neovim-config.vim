@@ -3,6 +3,9 @@ call plug#begin('~/.config/nvim/plugged')
 " color schemes
 Plug 'mhartington/oceanic-next'
 
+" Status line plugin
+Plug 'itchyny/lightline.vim'
+
 " Vim plugin for easy alignment. Visit github site for more info.
 Plug 'junegunn/vim-easy-align'
 
@@ -34,6 +37,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jbgutierrez/vim-babel'
 Plug 'mattn/webapi-vim'
 
+" Plugin for dev icons for vim
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " fzf mapping to Ctrl-p like
@@ -55,6 +61,20 @@ let g:neomake_javascript_enabled_markers = ['eslint']
 let g:neomake_open_list = 2
 " Any extra args required to be passed to command
 "let g:neomake_javascript_eslint_marker
+
+" Settings for dev-icons
+set encoding=utf8
+set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline\ Nerd\ Font\ Complete\ Mono\ 11
+
+" lightline settings
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'component': {
+    \   'readonly': '%{&readonly?"":""}',
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \}
 
 " Theme settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
