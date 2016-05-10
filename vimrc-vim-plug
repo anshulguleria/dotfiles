@@ -20,7 +20,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'heavenshell/vim-jsdoc'
 
 " Ctrl p fuzzy file searching
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " emmet coding
 Plug 'mattn/emmet-vim'
@@ -34,6 +34,9 @@ Plug 'mattn/webapi-vim'
 
 " plugin for quich movement in vim like 'f' key in vimium
 Plug 'easymotion/vim-easymotion'
+
+" Plugin for dev icons
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
