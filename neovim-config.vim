@@ -55,7 +55,7 @@ let g:jsdoc_underscore_private = 1
 let g:jsdoc_enable_es6 = 1
 
 " neomake settings
-autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 " Set linter to eslint
 let g:neomake_javascript_enabled_markers = ['eslint']
 let g:neomake_open_list = 2
@@ -90,6 +90,9 @@ set smartcase
 
 " Set line numbers to be visible
 set number
+
+" Set cursor line highlight
+set cursorline
 
 " Indentation settings
 " size of hard tabstop
