@@ -93,6 +93,8 @@ set number
 
 " Set cursor line highlight
 set cursorline
+hi CursorLine term=bold cterm=bold gui=bold
+" END
 
 " Indentation settings
 " size of hard tabstop
