@@ -31,6 +31,9 @@ Plug 'mattn/emmet-vim'
 
 " Show git diff integrationa and add/remove highlight
 Plug 'airblade/vim-gitgutter'
+" Git plugin for vim to help in some git commands.
+" Mainly using this to help lightline with git
+Plug 'tpope/vim-fugitive'
 
 " Babel plugin and as plugin suggests
 " we are installing webapi also
@@ -64,17 +67,9 @@ let g:neomake_open_list = 2
 
 " Settings for dev-icons
 set encoding=utf8
-set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline\ Nerd\ Font\ Complete\ Mono\ 11
 
 " lightline settings
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'component': {
-    \   'readonly': '%{&readonly?"":""}',
-    \ },
-    \ 'separator': { 'left': '', 'right': '' },
-    \ 'subseparator': { 'left': '', 'right': '' }
-    \}
+source $HOME/.config/nvim/config/lightline.vimrc
 
 " Theme settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
