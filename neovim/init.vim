@@ -1,47 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" color schemes
-Plug 'mhartington/oceanic-next'
-
-" Status line plugin
-Plug 'itchyny/lightline.vim'
-
-" Vim plugin for easy alignment. Visit github site for more info.
-Plug 'junegunn/vim-easy-align'
-
-" On-demand loading on some event.
-" Vim plugin to show directory structure.
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
-" Plugin outside ~/.config/nvim/plugged with post-update hook
-" Fuzzy search plugin fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Syntax highlighting for javascript
-Plug 'othree/yajs.vim'
-
-" Plugin for jsdoc auto-snippets
-Plug 'heavenshell/vim-jsdoc'
-
-" Syntax checking plugin for asynchronous functionality
-Plug 'benekastah/neomake'
-
-" Emmet coding
-Plug 'mattn/emmet-vim'
-
-" Show git diff integrationa and add/remove highlight
-Plug 'airblade/vim-gitgutter'
-" Git plugin for vim to help in some git commands.
-" Mainly using this to help lightline with git
-Plug 'tpope/vim-fugitive'
-
-" Babel plugin and as plugin suggests
-" we are installing webapi also
-Plug 'jbgutierrez/vim-babel'
-Plug 'mattn/webapi-vim'
-
-" Plugin for dev icons for vim
-Plug 'ryanoasis/vim-devicons'
+" Included plugins
+source $HOME/.config/nvim/config/plugins.vimrc
 
 call plug#end()
 
@@ -76,54 +36,5 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme OceanicNext
 set background=dark
 
-" Set case insensitive search for autosuggest
-" and other commands
-set ignorecase
-" Set smartcase on which check for capital letters for
-" direct match rather than case insensitive
-set smartcase
-
-" Set line numbers to be visible
-set number
-
-" Set cursor line highlight
-set cursorline
-hi CursorLine term=bold cterm=bold gui=bold
-" END
-
-" Indentation settings
-" size of hard tabstop
-set tabstop=4
-
-" size of indent
-set shiftwidth=4
-
-" A combination of spaces and tabs are used to simulate
-" tab stops at a width other than (hard) tabstop
-set softtabstop=4
-
-" Always uses spaces instead of tab character
-set expandtab
-
-" Folding settings
-set foldmethod=indent   " fold based on indent
-set foldnestmax=10      " deepest fold is 10 levels
-set nofoldenable        " don't fold by default
-set foldlevel=1
-
-" WHITESPACE CONFIGURATION
-" ----------------------------------
-" highlight extra whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" auto-strip white spaces on save
-function! TrimWhiteSpace()
-    %s/\s\+$//e
-endfunction
-autocmd BufWritePre * :call TrimWhiteSpace()
-" ENDS
+" Editor settings
+source $HOME/.config/nvim/config/editor.vimrc
