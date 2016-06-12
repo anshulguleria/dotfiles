@@ -32,7 +32,7 @@ set encoding=utf8
 source $HOME/.config/nvim/config/lightline.vimrc
 
 " Theme settings
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 colorscheme OceanicNext
 set background=dark
 
