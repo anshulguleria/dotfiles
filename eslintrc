@@ -23,7 +23,7 @@
         "no-undef": 2,
         "consistent-this": ["error", "self"],
         "block-scoped-var": 2,
-        "no-use-before-define": 2
+        "no-use-before-define": ["warn", { "functions": false }]
     }
 }
 
