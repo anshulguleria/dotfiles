@@ -3,7 +3,8 @@
     "env": {
         "browser": true,
         "node": true,
-        "es6": true
+        "es6": true,
+        "mocha": true
     },
     "ecmaFeatures": {
         "blockBindings": true,
@@ -23,7 +24,10 @@
         "no-undef": 2,
         "consistent-this": ["error", "self"],
         "block-scoped-var": 2,
-        "no-use-before-define": ["warn", { "functions": false }]
+        "no-use-before-define": ["warn", { "functions": false }],
+        "semi": ["warn", "always"],
+        "no-unreachable": "error",
+        "no-unexpected-multiline": "error"
     }
 }
 
