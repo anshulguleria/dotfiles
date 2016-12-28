@@ -1,6 +1,7 @@
 " color schemes
 Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
+Plug 'flazz/vim-colorschemes'
 
 " Status line plugin
 Plug 'itchyny/lightline.vim'
