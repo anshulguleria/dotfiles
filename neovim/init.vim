@@ -20,8 +20,8 @@ let g:jsdoc_enable_es6 = 1
 " neomake settings
 autocmd! BufWritePost * Neomake
 " Set linter to eslint
-let g:neomake_javascript_enabled_markers = ['eslint']
-let g:neomake_python_enabled_makers = ['pylint', 'flake8']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_python_enabled_makers = ['pylint']
 let g:neomake_open_list = 2
 " Any extra args required to be passed to command
 "let g:neomake_javascript_eslint_marker
