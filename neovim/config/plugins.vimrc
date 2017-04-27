@@ -42,3 +42,6 @@ Plug 'mattn/webapi-vim'
 
 " Plugin for dev icons for vim
 Plug 'ryanoasis/vim-devicons'
+
+" Plugin to read editor config
+Plug 'editorconfig/editorconfig-vim'
