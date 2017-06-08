@@ -2,6 +2,7 @@
 Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 Plug 'flazz/vim-colorschemes'
+Plug 'jdkanani/vim-material-theme'
 
 " Status line plugin
 Plug 'itchyny/lightline.vim'
@@ -45,3 +46,5 @@ Plug 'ryanoasis/vim-devicons'
 
 " Plugin to read editor config
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'Yggdroot/indentLine'

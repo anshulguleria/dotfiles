@@ -36,7 +36,8 @@ source $HOME/.config/nvim/config/lightline.vimrc
 set termguicolors
 "colorscheme OceanicNext
 "colorscheme gruvbox
-colorscheme brogrammer
+"colorscheme brogrammer
+colorscheme material-theme
 set background=dark
 
 " Editor settings

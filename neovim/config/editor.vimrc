@@ -35,6 +35,10 @@ set foldmethod=indent   " fold based on indent
 set nofoldenable        " don't fold by default
 set foldlevel=1
 
+" Marker line on text length limit
+set textwidth=80
+set colorcolumn=+1
+
 " WHITESPACE CONFIGURATION
 " ----------------------------------
 " highlight extra whitespaces
