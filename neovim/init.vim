@@ -33,12 +33,12 @@ set encoding=utf8
 source $HOME/.config/nvim/config/lightline.vimrc
 
 " Theme settings
-set termguicolors
-"colorscheme OceanicNext
+"set termguicolors
+set background=dark
+colorscheme OceanicNext
 "colorscheme gruvbox
 "colorscheme brogrammer
-colorscheme material-theme
-set background=dark
+"colorscheme material-theme
 
 " Editor settings
 source $HOME/.config/nvim/config/editor.vimrc

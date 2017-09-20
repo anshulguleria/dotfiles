@@ -55,3 +55,6 @@ function! TrimWhiteSpace()
 endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
 " ENDS
+
+" Settings for indentLine
+let g:indentLine_enabled = 0
