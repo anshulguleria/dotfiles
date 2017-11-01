@@ -21,6 +21,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Syntax highlighting for javascript
 Plug 'othree/yajs.vim'
 
+" Plugin for jsx highlighting
+Plug 'mxw/vim-jsx'
+
 " Plugin for jsdoc auto-snippets
 Plug 'heavenshell/vim-jsdoc'
 

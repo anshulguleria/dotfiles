@@ -12,6 +12,10 @@ noremap <C-p> :FZF<CR>
 " NERDTree settings
 let g:NERDTreeWinPos = "right"
 
+" jsx settings
+" Set highlighting for js files too
+let g:jsx_ext_required = 0
+
 " jsdoc settings
 let g:jsdoc_access_descriptions = 2
 let g:jsdoc_underscore_private = 1
