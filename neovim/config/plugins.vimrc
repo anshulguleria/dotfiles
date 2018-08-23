@@ -3,6 +3,8 @@ Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 Plug 'flazz/vim-colorschemes'
 Plug 'jdkanani/vim-material-theme'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Status line plugin
 Plug 'itchyny/lightline.vim'
@@ -50,4 +52,15 @@ Plug 'ryanoasis/vim-devicons'
 " Plugin to read editor config
 Plug 'editorconfig/editorconfig-vim'
 
+" Plugin to show indentation lines
 Plug 'Yggdroot/indentLine'
+
+" Plugin for remote files development
+Plug 'zenbro/mirror.vim'
+
+" Plugin for markdown syntax highlighting and rules matching
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" Plugin for typescript syntax highlighting
+Plug 'leafgarland/typescript-vim'

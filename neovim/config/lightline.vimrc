@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -18,10 +18,12 @@ let g:lightline = {
       \ },
       \ 'component_type': {
       \   'syntastic': 'error',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+      \
+      \ }
+" to revert add below two lines to line 22
+"\ 'separator': { 'left': '', 'right': '' },
+"\ 'subseparator': { 'left': '', 'right': '' }
 
 function! LightLineModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
