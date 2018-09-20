@@ -39,6 +39,18 @@ set foldlevel=1
 set textwidth=80
 set colorcolumn=+1
 
+" Set autoread to automatically refresh the file if it has changed but not
+" editted by vim/nvim
+set autoread
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 " WHITESPACE CONFIGURATION
 " ----------------------------------
 " highlight extra whitespaces

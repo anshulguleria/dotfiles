@@ -46,9 +46,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'jbgutierrez/vim-babel'
 Plug 'mattn/webapi-vim'
 
-" Plugin for dev icons for vim
-Plug 'ryanoasis/vim-devicons'
-
 " Plugin to read editor config
 Plug 'editorconfig/editorconfig-vim'
 
@@ -64,3 +61,6 @@ Plug 'plasticboy/vim-markdown'
 
 " Plugin for typescript syntax highlighting
 Plug 'leafgarland/typescript-vim'
+
+" Plugin for dev icons for vim
+Plug 'ryanoasis/vim-devicons'
