@@ -22,13 +22,19 @@ let g:jsdoc_underscore_private = 1
 let g:jsdoc_enable_es6 = 1
 
 " neomake settings
-autocmd! BufWritePost * Neomake
+"autocmd! BufWritePost * Neomake
 " Set linter to eslint
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_python_enabled_makers = ['pylint']
-let g:neomake_open_list = 2
+"let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_python_enabled_makers = ['pylint']
+"let g:neomake_open_list = 2
 " Any extra args required to be passed to command
 "let g:neomake_javascript_eslint_marker
+
+" ALE linter settings
+let g:ale_open_list = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 " Settings for dev-icons
 set encoding=utf8
@@ -39,14 +45,15 @@ source $HOME/.config/nvim/config/lightline.vimrc
 " Theme settings
 "set termguicolors
 set background=dark
-"colorscheme OceanicNext
-colorscheme gruvbox
+colorscheme OceanicNext
+"colorscheme gruvbox
 "colorscheme brogrammer
 "colorscheme material-theme
 "colorscheme desertink
 "colorscheme onedark
 "colorscheme neodark
 "colorscheme dracula
+"colorscheme onehalfdark
 
 " Editor settings
 source $HOME/.config/nvim/config/editor.vimrc

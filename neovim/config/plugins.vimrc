@@ -5,6 +5,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jdkanani/vim-material-theme'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Status line plugin
 Plug 'itchyny/lightline.vim'
@@ -30,7 +31,9 @@ Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 
 " Syntax checking plugin for asynchronous functionality
-Plug 'benekastah/neomake'
+"Deprecating neomake in favour of ale
+"Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 
 " Emmet coding
 Plug 'mattn/emmet-vim'
