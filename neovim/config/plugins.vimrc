@@ -67,3 +67,10 @@ Plug 'leafgarland/typescript-vim'
 
 " Plugin for dev icons for vim
 Plug 'ryanoasis/vim-devicons'
+
+" Plugin to update ctags automatically on file save
+Plug 'craigemery/vim-autotag'
+
+" Plugin to add interactive scratch pad for your languages
+" Run Codi command to enable and Codi! to disable
+Plug 'metakirby5/codi.vim'

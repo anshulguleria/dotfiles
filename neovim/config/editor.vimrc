@@ -70,3 +70,7 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 
 " Settings for indentLine
 let g:indentLine_enabled = 0
+
+" Settings for using external editorconfig plugin. This is done because in mac
+" neovim is not build through python engine
+let g:EditorConfig_core_mode = 'external_command'
