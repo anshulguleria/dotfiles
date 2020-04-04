@@ -31,10 +31,10 @@ let g:jsdoc_enable_es6 = 1
 "let g:neomake_javascript_eslint_marker
 
 " ALE linter settings
-let g:ale_open_list = 1
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+"let g:ale_open_list = 1
+"let g:ale_linters = {
+"\   'javascript': ['eslint'],
+"\}
 
 " Settings for dev-icons
 set encoding=utf8
@@ -45,10 +45,12 @@ source $HOME/.config/nvim/config/lightline.vimrc
 " Theme settings
 "set termguicolors
 set background=dark
-colorscheme OceanicNext
-"colorscheme gruvbox
+"colorscheme inkpot
+"colorscheme OceanicNext
+colorscheme gruvbox
 "colorscheme brogrammer
 "colorscheme material-theme
+"colorscheme materialtheme
 "colorscheme desertink
 "colorscheme onedark
 "colorscheme neodark

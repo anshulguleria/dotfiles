@@ -73,4 +73,18 @@ let g:indentLine_enabled = 0
 
 " Settings for using external editorconfig plugin. This is done because in mac
 " neovim is not build through python engine
-let g:EditorConfig_core_mode = 'external_command'
+" I think this issue is fixed now so commenting it now.
+"let g:EditorConfig_core_mode = 'external_command'
+
+" Enable ale virtual text which can show error messages beside the line causing
+" the error.
+" commenting it now as we are use coc extensions for linting
+"let g:ale_virtualtext_cursor = 1
+
+" Setting to remap go to definitions and implementation using language servers
+" with the help of coc language servers
+" Remap keys for gotos:
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
