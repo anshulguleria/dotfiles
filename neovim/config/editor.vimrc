@@ -71,6 +71,19 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 " Settings for indentLine
 let g:indentLine_enabled = 0
 
+" Setting help mapping to coc plugins. Pressing K will trigger documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+" This is better than remapping K but it is not working
+"set keywordprg=:call\ <SID>show_documentation()
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
+
 " Settings for using external editorconfig plugin. This is done because in mac
 " neovim is not build through python engine
 " I think this issue is fixed now so commenting it now.
