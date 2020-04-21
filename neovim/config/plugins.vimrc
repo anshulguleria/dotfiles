@@ -106,7 +106,8 @@ Plug 'neoclide/coc-eslint', { 'do': 'yarn install' }
 "Plug 'neoclide/coc-tslint-plugin', { 'do': 'yarn install' }
 
 " Plugin to enable nvim editing on browser
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Disabling as not using it in all systems
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " For markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
