@@ -111,3 +111,6 @@ Plug 'neoclide/coc-eslint', { 'do': 'yarn install' }
 
 " For markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" Highlight based on indentation level
+Plug 'thiagoalessio/rainbow_levels.vim'

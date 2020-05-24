@@ -10,3 +10,14 @@ This file lists the basic dependencies to be installed.
 * nvm
 * node & npm via nvm
 * fzf (fuzzy search in terminal)
+
+### Prompt support in install.sh
+
+We need prompt handling for these libraries as sometime I might not want
+to install something which was done previously
+
+### Resume support in install.sh
+
+If a script fails in between I should be able to resume from where I left off.
+Otherwise I have to revert complete thing and some installations might be
+difficult to revert or reinstall.

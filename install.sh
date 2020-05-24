@@ -4,6 +4,11 @@
 # Exit on error(-e) and show commads being run(-x)
 set -xe
 
+# TODO: prompt user for installations
+
+# Get the full path to this directory
+dir_path=$(realpath $(dirname $0))
+
 # install git
 sudo apt install -y git
 
@@ -49,6 +54,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # once this is done open up nvim and run `PlugInstall` command. But
 # before this, lots of my plugins require node, npm and yarn. Lets
 # install those first
+
+# There is an another alternative to version manager namely asdf, reference:
+# https://asdf-vm.com/#/core-manage-plugins
+# Install asdf
+# sh dir_path/install-scripts/asdf-setup.sh
 
 # install nvm as node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash

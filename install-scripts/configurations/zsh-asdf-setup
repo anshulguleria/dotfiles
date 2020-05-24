@@ -1,0 +1,7 @@
+# A plugin manager which provides supprot for multiple tools with multiple
+# version support. Think of it like nvm but for all other libraries too
+# https://github.com/asdf-vm/asdf
+. $HOME/.asdf/asdf.sh
+
+# completions setup
+. $HOME/.asdf/completions/asdf.bash
