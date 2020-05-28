@@ -11,7 +11,7 @@ asdf plugin add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 # install latest node version
-node_latest=$(asdf latest node) # keep updating this as you need
+node_latest=$(asdf latest nodejs) # keep updating this as you need
 asdf install nodejs $node_latest
 # set the installed as current
 asdf global nodejs $node_latest
