@@ -72,6 +72,7 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 let g:indentLine_enabled = 0
 
 " Setting help mapping to coc plugins. Pressing K will trigger documentation
+" Referrence: https://www.reddit.com/r/vim/comments/a4bn0w/how_do_i_show_documentation_with_coc_with/
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 " This is better than remapping K but it is not working
 "set keywordprg=:call\ <SID>show_documentation()
@@ -83,6 +84,8 @@ function! s:show_documentation()
         call CocAction('doHover')
     endif
 endfunction
+
+com! FormatJSON %!python -m json.tool
 
 " Settings for using external editorconfig plugin. This is done because in mac
 " neovim is not build through python engine

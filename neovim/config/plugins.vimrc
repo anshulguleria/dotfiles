@@ -2,6 +2,8 @@
 Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 Plug 'flazz/vim-colorschemes'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'mswift42/vim-themes'
 Plug 'jdkanani/vim-material-theme'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -19,7 +21,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Plugin outside ~/.config/nvim/plugged with post-update hook
 " Fuzzy search plugin fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Syntax highlighting for javascript
 "Plug 'othree/yajs.vim'
@@ -43,7 +46,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'sheerun/vim-polyglot'
 
 " Plugin for jsdoc auto-snippets
-Plug 'heavenshell/vim-jsdoc'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript','typescriptreact'],
+  \ 'do': 'make install'
+\}
 
 " Syntax checking plugin for asynchronous functionality
 "Deprecating neomake in favour of ale
@@ -85,7 +91,7 @@ Plug 'craigemery/vim-autotag'
 Plug 'metakirby5/codi.vim'
 
 " Plugin to enable import cost. Usage :ImportCost
-"Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
 " Intellisence engine for nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -95,9 +101,13 @@ Plug 'neoclide/coc-tsserver', { 'do': 'yarn install' }
 " For JSON
 Plug 'neoclide/coc-json', { 'do': 'yarn install' }
 " For import-cost
-Plug 'wix/import-cost', { 'do': 'npm install' }
+" This doesn't work as this is a monorepo and plug doesn't know what to install
+"Plug 'wix/import-cost', { 'do': 'npm install' }
 " For eslint integration
 Plug 'neoclide/coc-eslint', { 'do': 'yarn install' }
+
+" For running jest on your test files automatically
+Plug 'neoclide/coc-jest', { 'do': 'yarn install' }
 
 " For color highlight for color code
 " Disabling as I am not able to make it work

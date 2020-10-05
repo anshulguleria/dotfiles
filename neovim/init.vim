@@ -17,9 +17,10 @@ let g:NERDTreeWinPos = "right"
 let g:jsx_ext_required = 0
 
 " jsdoc settings
-let g:jsdoc_access_descriptions = 2
-let g:jsdoc_underscore_private = 1
-let g:jsdoc_enable_es6 = 1
+"let g:jsdoc_access_descriptions = 2
+"let g:jsdoc_underscore_private = 1
+"let g:jsdoc_enable_es6 = 1
+let g:jsdoc_formatter = 'tsdoc'
 
 " neomake settings
 "autocmd! BufWritePost * Neomake
@@ -43,11 +44,11 @@ set encoding=utf8
 source $HOME/.config/nvim/config/lightline.vimrc
 
 " Theme settings
-"set termguicolors
+set termguicolors
 set background=dark
 "colorscheme inkpot
-"colorscheme OceanicNext
-colorscheme gruvbox
+colorscheme oceanic_material
+"colorscheme gruvbox
 "colorscheme brogrammer
 "colorscheme material-theme
 "colorscheme materialtheme
@@ -56,6 +57,10 @@ colorscheme gruvbox
 "colorscheme neodark
 "colorscheme dracula
 "colorscheme onehalfdark
+"colorscheme darktooth
+"colorscheme onedark
+"colorscheme dante
+"colorscheme warm-night
 
 " Editor settings
 source $HOME/.config/nvim/config/editor.vimrc
